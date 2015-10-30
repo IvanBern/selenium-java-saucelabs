@@ -60,8 +60,8 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider, SauceOnD
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
-                new Object[]{"internet explorer", "11", "Windows 8.1"},
-                new Object[]{"safari", "8", "OSX 10.8"},
+                new Object[]{"Mozilla Firefox", "41.0Test ", "OS X 10.11"},
+                new Object[]{"safari", "9.0", "OS X 10.11"},
         };
     }
 
