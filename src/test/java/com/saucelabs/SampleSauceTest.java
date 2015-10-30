@@ -60,7 +60,7 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider, SauceOnD
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
-                new Object[]{"Mozilla Firefox", "41.0", "OS X 10.11"},
+                new Object[]{"internet explorer", "11", "Windows 10"},
                 new Object[]{"safari", "9.0", "OS X 10.11"},
         };
     }
@@ -105,7 +105,7 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider, SauceOnD
     public void webDriver(String browser, String version, String os) throws Exception {
         WebDriver driver = createDriver(browser, version, os);
         driver.get("http://www.amazon.com/");
-        assertEquals(driver.getTitle(), "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
+        assertEquals(driver.getTitle(), "10 Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
         driver.quit();
     }
 
